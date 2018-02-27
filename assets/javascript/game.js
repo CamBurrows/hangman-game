@@ -6,7 +6,7 @@ var wordList = ["galaxy", "martian", "dimension", "destroy", "abilities",
                 "advanced", "cloaking", "futuristic", "foreign",
                 "lifeform"];
 var wordLength = 0;
-var guessRemain = 10;
+var guessRemain = 0;
 var possibleGuess = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k" , "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 var currentWord = "";
 var correctLetters = [];
