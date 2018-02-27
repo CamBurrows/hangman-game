@@ -1,0 +1,163 @@
+* {
+box-sizing: border-box
+}
+
+.container {
+    max-width: 60%;
+    background-color: aqua;
+    margin: auto;
+}
+
+.title {
+    width: 100%;
+    background-color: white;
+    text-align: center;
+    border: 3px solid grey;
+    margin-bottom: 10px;
+}
+
+h1 {
+    font-family: 'Fascinate', cursive;
+}
+
+h2 {
+    font-family: 'Russo One', sans-serif;
+    font-size: 20px;
+}
+
+h3 {
+    font-family: 'Russo One', sans-serif;
+    font-size: 18px;
+    padding-left: 8px;
+}
+
+.content {
+    max-width: 100%;
+}
+
+.graphic {
+    width: 32%;
+    float: left;
+    border: 3px solid grey;
+    margin-right: 10px;
+    background-image: url("../images/space.gif");
+    background-repeat: repeat-y;
+}
+
+.game {
+    width: 65%;
+    border: 3px solid grey;
+    float: left;
+}
+
+.ship {
+    max-width: 100%;
+}
+
+#ufo {
+    margin-left: 80px;
+}
+
+.laser {
+    margin-left: 122px;
+    visibility: hidden;
+}
+
+#world {
+    margin-left: 84px;
+    padding-bottom: 20px;
+}
+
+.guessline {
+    width: 100%;
+    margin-left: 20px;
+}
+
+#letter1,
+#letter2,
+#letter3,
+#letter4,
+#letter5,
+#letter6,
+#letter7,
+#letter8,
+#letter9,
+#letter10 {
+    width: 4%;
+    height: 40px;
+    border-bottom: 4px solid grey;
+    padding: 4px 4px 10px 4px;
+    margin: 8px;
+    float: left;
+    font-family: 'Russo One', sans-serif;
+    font-size: 22px;
+}
+
+.infoContainer {
+    width:100%;
+}
+
+.guessbox {
+    width: 26%;
+    border: 4px solid grey;
+    margin: 20px;
+    float: left;
+    height: 200px;
+    text-align: center;
+    padding-right:30px;
+}
+
+#resultimage {
+    width: 60%;
+    height: 200px;
+    border: 4px solid grey;
+    margin: 20px 20px 20px 0px;
+    float: left;
+    background-image: url("../images/game-inprog.jpg");
+    background-size: cover;
+}
+
+#resulttext {
+    font-size: 20px;
+    font-family: 'Russo One', sans-serif;
+    color: white;
+    padding: 120px 0px 30px 30px;
+}
+
+.misfirebox {
+    width: 90%;
+    border: 4px solid grey;
+    float: left;
+    margin: 0px 20px;
+    height: 140px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#misfires {
+    font-family: 'Russo One', sans-serif;
+    font-size: 50px;
+}
+
+#newgame {
+    width: 90%;
+    border: 4px solid grey;
+    float: left;
+    margin: 0px 20px;
+    height: 50px;
+    text-align: center;
+    background-color: green;
+    margin-bottom: 20px;
+    font-family: 'Russo One', sans-serif;
+    color: white;
+}
+
+#guessesleft {
+    font-family: 'Russo One', sans-serif;
+    font-size: 40px;
+    margin-left: 30px;
+}
+
+#hiddenimage {
+    display: none;
+}

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hangman Save the World</title>
+    <link href="https://fonts.googleapis.com/css?family=Fascinate|Russo+One" rel="stylesheet">
+    <link rel ="stylesheet" href="assets/css/style.css">
+    
+</head>
+<body>
+<div class="container">
+    
+    <div class="title">
+        <h1>Save Earth from Alien Attack!</h1>
+        <h2>Click NEW GAME button to begin, <br> Guess the Sci-fi related word with letter keys.</h2>
+    </div>
+    
+    <div class="content">
+
+        <div id="hiddenimage"><img src="assets/images/game-win.jpg"></div>
+        <div id="hiddenimage"><img src="assets/images/game-lose.jpg"></div>
+        
+        <div class="graphic">
+            
+            <div class="ship">
+                <img id="ufo" src="assets/images/ufo.gif" wclassth=120px height=80px>
+            </div>
+            <div>    
+                <img class="laser" id="shot1" src=assets/images/laser-pixel.png width=25px height=30px>
+            </div>
+            <div>
+                <img class="laser" id="shot2" src=assets/images/laser-pixel.png width=25px height=30px>
+            </div>
+            <div>
+                <img class="laser" id="shot3" src=assets/images/laser-pixel.png width=25px height=30px>
+            </div>
+            <div>
+                <img class="laser" id="shot4" src=assets/images/laser-pixel.png width=25px height=30px>
+            </div>
+            <div>
+                <img class="laser" id="shot5" src=assets/images/laser-pixel.png width=25px height=30px>
+            </div>
+            <div>
+                <img class="laser" id="shot6" src=assets/images/laser-pixel.png width=25px height=30px>
+            </div>
+            <div>
+                <img class="laser" id="shot7" src=assets/images/laser-pixel.png width=25px height=30px>
+            </div>
+            <div>
+                <img class="laser" id="shot8" src=assets/images/laser-pixel.png width=25px height=30px>
+            </div>
+            <div>
+                <img class="laser" id="shot9" src=assets/images/laser-pixel.png width=25px height=30px>
+            </div>
+            <div>
+                <img class="laser" id="shot10" src=assets/images/laser-pixel.png width=25px height=30px>
+            </div>
+            <div id="earth">
+                <img id="world" src=assets/images/earth.png width=100px height=100px>
+            </div>
+        </div>
+
+        <div class="game">
+            <div class="guessline">
+                
+                <div id="letter1">
+                </div>
+                <div id="letter2">
+                </div>
+                <div id="letter3">
+                </div>
+                <div id="letter4">
+                </div>
+                <div id="letter5">
+                </div>
+                <div id="letter6">
+                </div>
+                <div id="letter7">
+                </div>
+                <div id="letter8">
+                </div>
+                <div id="letter9">
+                </div>
+                <div id="letter10">
+                </div>
+                
+            </div>
+
+            <div class="infoContainer">
+                <div class="guessbox">
+                <h3>Guesses Remaining:</h3>
+                <div id="guessesleft"></div>
+                </div>
+                <div id="resultimage">
+                    <div id="resulttext"></div>
+                </div>
+            </div>
+        
+            <div class="misfirebox">
+                <h2>Misfires:</h2>
+                <div id="misfires">
+                </div>
+            </div>
+
+            <div id="newgame">
+            <p>NEW GAME</p>
+            </div>
+
+            
+        </div>
+    </div>
+
+</div>    
+
+<script type="text/javascript" src="assets/javascript/game.js"></script>
+</body>
+</html>
