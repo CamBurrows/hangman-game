@@ -107,136 +107,136 @@ function logger (){
     console.log("----------------")
 };
 
-
+//invoke new game when page is loaded.
+newGame();
 
 //detecting click on new game button to invoke new game function
 document.getElementById("newgame").onclick = newGame;
 
 //on key up, save key pressed as guess variable
 document.onkeyup = function(event) {
-    
-    var guess = event.key;
-    
-    //if guess is within remaining alphabet proceed
-    if (possibleGuess.indexOf(guess) != -1) {
-            
-        possibleGuess = possibleGuess.filter(e => e !== guess);
 
-            //loop for cycling through letters of currentword, and adding to counter if guess matches letter
+    if (wrongGuess < 11){
+    
+        var guess = event.key;
+        
+        //if guess is within remaining alphabet proceed
+        if (possibleGuess.indexOf(guess) != -1) {
                 
-            for(var i = 0; i < currentWord.length; i++){
-                if(correctLetters[i] === guess){
-                    correctGuess++;
-                }
+            possibleGuess = possibleGuess.filter(e => e !== guess);
 
-            };
+                //loop for cycling through letters of currentword, and adding to counter if guess matches letter
+                    
+                for(var i = 0; i < currentWord.length; i++){
+                    if(correctLetters[i] === guess){
+                        correctGuess++;
+                    }
 
-            //if guess is not within correct letters array, add one to wrong guess variable, remove guess from possibleGuess array, push to misfires array
-            if (correctLetters.indexOf(guess) === -1) {
-                wrongGuess++;
-                guessRemain--;
-                misfire.push(guess);
+                };
 
-                //calling the laser image to correspond with missed letters
-                if (guessRemain === 9){
-                    document.getElementById("shot1").style.visibility = "visible";
-                }
+                //if guess is not within correct letters array, add one to wrong guess variable, remove guess from possibleGuess array, push to misfires array
+                if (correctLetters.indexOf(guess) === -1) {
+                    wrongGuess++;
+                    guessRemain--;
+                    misfire.push(guess);
 
-                if (guessRemain === 8){
-                    document.getElementById("shot2").style.visibility = "visible";
-                }
+                    //calling the laser image to correspond with missed letters
+                    if (guessRemain === 9){
+                        document.getElementById("shot1").style.visibility = "visible";
+                    }
 
-                if (guessRemain === 7){
-                    document.getElementById("shot3").style.visibility = "visible";
-                }
+                    if (guessRemain === 8){
+                        document.getElementById("shot2").style.visibility = "visible";
+                    }
 
-                if (guessRemain === 6){
-                    document.getElementById("shot4").style.visibility = "visible";
-                }
+                    if (guessRemain === 7){
+                        document.getElementById("shot3").style.visibility = "visible";
+                    }
 
-                if (guessRemain === 5){
-                    document.getElementById("shot5").style.visibility = "visible";
-                }
+                    if (guessRemain === 6){
+                        document.getElementById("shot4").style.visibility = "visible";
+                    }
 
-                if (guessRemain === 4){
-                    document.getElementById("shot6").style.visibility = "visible";
-                }
+                    if (guessRemain === 5){
+                        document.getElementById("shot5").style.visibility = "visible";
+                    }
 
-                if (guessRemain === 3){
-                    document.getElementById("shot7").style.visibility = "visible";
-                }
+                    if (guessRemain === 4){
+                        document.getElementById("shot6").style.visibility = "visible";
+                    }
 
-                if (guessRemain === 2){
-                    document.getElementById("shot8").style.visibility = "visible";
-                }
+                    if (guessRemain === 3){
+                        document.getElementById("shot7").style.visibility = "visible";
+                    }
 
-                if (guessRemain === 1){
-                    document.getElementById("shot9").style.visibility = "visible";
-                }
+                    if (guessRemain === 2){
+                        document.getElementById("shot8").style.visibility = "visible";
+                    }
 
-                if (guessRemain === 0){
-                    document.getElementById("shot10").style.visibility = "visible";
-                }
-            };
+                    if (guessRemain === 1){
+                        document.getElementById("shot9").style.visibility = "visible";
+                    }
 
-            //Statements asking if guess is the same as a certin letter, show that letter as the content in corresponding div.
-            if (guess === correctLetters[0]) {
-                document.getElementById("letter1").innerHTML = correctLetters[0];
-            };
+                    if (guessRemain === 0){
+                        document.getElementById("shot10").style.visibility = "visible";
+                    }
+                };
 
-            if (guess === correctLetters[1]) {
-                document.getElementById("letter2").innerHTML = correctLetters[1];
-            };
+                //Statements asking if guess is the same as a certin letter, show that letter as the content in corresponding div.
+                if (guess === correctLetters[0]) {
+                    document.getElementById("letter1").innerHTML = correctLetters[0];
+                };
 
-            if (guess === correctLetters[2]) {
-                document.getElementById("letter3").innerHTML = correctLetters[2];
-            };
+                if (guess === correctLetters[1]) {
+                    document.getElementById("letter2").innerHTML = correctLetters[1];
+                };
 
-            if (guess === correctLetters[3]) {
-                document.getElementById("letter4").innerHTML = correctLetters[3];
-            };
+                if (guess === correctLetters[2]) {
+                    document.getElementById("letter3").innerHTML = correctLetters[2];
+                };
 
-            if (guess === correctLetters[4]) {
-                document.getElementById("letter5").innerHTML = correctLetters[4];
-            };
+                if (guess === correctLetters[3]) {
+                    document.getElementById("letter4").innerHTML = correctLetters[3];
+                };
 
-            if (guess === correctLetters[5]) {
-                document.getElementById("letter6").innerHTML = correctLetters[5];
-            };
+                if (guess === correctLetters[4]) {
+                    document.getElementById("letter5").innerHTML = correctLetters[4];
+                };
 
-            if (guess === correctLetters[6]) {
-                document.getElementById("letter7").innerHTML = correctLetters[6];
-            };
+                if (guess === correctLetters[5]) {
+                    document.getElementById("letter6").innerHTML = correctLetters[5];
+                };
 
-            if (guess === correctLetters[7]) {
-                document.getElementById("letter8").innerHTML = correctLetters[7];
-            };
+                if (guess === correctLetters[6]) {
+                    document.getElementById("letter7").innerHTML = correctLetters[6];
+                };
 
-            if (guess === correctLetters[8]) {
-                document.getElementById("letter9").innerHTML = correctLetters[8];
-            };
-            
-            if (guess === correctLetters[9]) {
-                document.getElementById("letter10").innerHTML = correctLetters[9];
-            };
-                //update guesses remaining
-            document.getElementById("guessesleft").innerHTML = guessRemain;
+                if (guess === correctLetters[7]) {
+                    document.getElementById("letter8").innerHTML = correctLetters[7];
+                };
 
-            document.getElementById("misfires").innerHTML = misfire.toString();
-    };
+                if (guess === correctLetters[8]) {
+                    document.getElementById("letter9").innerHTML = correctLetters[8];
+                };
+                
+                if (guess === correctLetters[9]) {
+                    document.getElementById("letter10").innerHTML = correctLetters[9];
+                };
+                    //update guesses remaining
+                document.getElementById("guessesleft").innerHTML = guessRemain;
 
-    if (correctGuess === wordLength) {
-        document.getElementById("resulttext").innerHTML = "You Won! Earth is safe!";
-        document.getElementById("resulttext").style.backgroundColor = "black";
-        //Having trouble with relative file path for modifying background image.
-        //document.getElementById("resultimage").style.backgroundImage = "('assets/images/game-win.jpg')";
-    };
+                document.getElementById("misfires").innerHTML = misfire.toString();
+        };
 
-    if (wrongGuess === 10) {
-        document.getElementById("resulttext").innerHTML = "You Lose! Earth has been destroyed!";
-        document.getElementById("resulttext").style.backgroundColor = "black";
-    };
+        if (correctGuess === wordLength) {
+            document.getElementById("resultimage").style.backgroundImage = 'url(assets/images/game-win.jpg)';
+        };
 
-logger();
+        if (wrongGuess === 10) {
+            document.getElementById("resultimage").style.backgroundImage = 'url(assets/images/game-lose.jpg)';
+        };
 
-};
+    logger();
+
+    }
+}

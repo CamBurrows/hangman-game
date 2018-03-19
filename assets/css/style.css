@@ -39,13 +39,14 @@ h3 {
     width: 32%;
     float: left;
     border: 3px solid grey;
-    margin-right: 10px;
+    margin-right: 2%;
     background-image: url("../images/space.gif");
     background-repeat: repeat-y;
+    text-align: center;
 }
 
 .game {
-    width: 65%;
+    width: 66%;
     border: 3px solid grey;
     float: left;
 }
@@ -54,17 +55,11 @@ h3 {
     max-width: 100%;
 }
 
-#ufo {
-    margin-left: 80px;
-}
-
 .laser {
-    margin-left: 122px;
     visibility: hidden;
 }
 
 #world {
-    margin-left: 84px;
     padding-bottom: 20px;
 }
 
@@ -100,7 +95,7 @@ h3 {
 .guessbox {
     width: 26%;
     border: 4px solid grey;
-    margin: 20px;
+    margin: 4%;
     float: left;
     height: 200px;
     text-align: center;
@@ -111,7 +106,7 @@ h3 {
     width: 60%;
     height: 200px;
     border: 4px solid grey;
-    margin: 20px 20px 20px 0px;
+    margin: 4% 2% 4% 0px;
     float: left;
     background-image: url("../images/game-inprog.jpg");
     background-size: cover;
@@ -160,4 +155,101 @@ h3 {
 
 #hiddenimage {
     display: none;
+}
+
+@media screen and (max-width:1025px){
+    .container {
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width:768px){
+    .container {
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width:420px){
+    .container {
+        max-width: 100%;
+    }
+
+    #letter1,
+    #letter2,
+    #letter3,
+    #letter4,
+    #letter5,
+    #letter6,
+    #letter7,
+    #letter8,
+    #letter9,
+    #letter10 {
+        padding: 2px 2px 2px 2px;
+        font-size: 30px;
+        margin: 20px 3px;
+        height: 20%;
+    }
+
+    .guessline {
+        margin-left: 6px;
+        padding-top: 10px;
+    }
+
+    #misfires {
+        font-family: 'Russo One', sans-serif;
+        font-size: 20px;
+    }
+
+    .guessbox {
+        width: 94%;
+        margin: 0px 3%;
+        float: left;
+        height: auto;
+        text-align: center;
+        padding-right: none;
+    }
+
+    h3 {
+        font-size: 14px;
+        padding-left: none;
+        margin-bottom: -2px;
+    }
+    
+    .misfirebox {
+        width: 94%;
+        border: 4px solid grey;
+        float: left;
+        margin: 0px 3%;
+        height: 140px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    #guessesleft {
+        font-size: 20px;
+    }
+
+    .game {
+        text-align: center;
+    }
+
+    .infoContainer {
+        text-align: center;
+        width: 100%;
+    }
+
+    #resultimage {
+        width: 94%;
+        height: auto;
+        border: 4px solid grey;
+        margin: 4% 3%;
+        float: left;
+        background-image: url("../images/game-inprog.jpg");
+        background-size: cover;
+    }
+
+    #newgame {
+        margin: 0px 4% 6% 4%;
+    }
+
 }
