@@ -23,8 +23,9 @@ function newGame (){
     guessRemain = 10;
     document.getElementById("guessesleft").innerHTML = 10;
     document.getElementById("misfires").innerHTML = "";
-    document.getElementById("resulttext").innerHTML = "";
-    document.getElementById("resulttext").style.backgroundColor = "transparent";
+    // document.getElementById("resulttext").innerHTML = "";
+    // document.getElementById("resulttext").style.backgroundColor = "transparent";
+    document.getElementById("resultimage").style.backgroundImage = 'url(assets/images/game-inprog.jpg)'
     wordLength = currentWord.length;
     correctLetters = currentWord.split("");
     possibleGuess = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k" , "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
@@ -116,7 +117,7 @@ document.getElementById("newgame").onclick = newGame;
 //on key up, save key pressed as guess variable
 document.onkeyup = function(event) {
 
-    if (wrongGuess < 11){
+    if (wrongGuess < 10){
     
         var guess = event.key;
         
@@ -228,15 +229,18 @@ document.onkeyup = function(event) {
                 document.getElementById("misfires").innerHTML = misfire.toString();
         };
 
-        if (correctGuess === wordLength) {
-            document.getElementById("resultimage").style.backgroundImage = 'url(assets/images/game-win.jpg)';
-        };
+    
+    }
+       
+    if (correctGuess === wordLength) {
+        document.getElementById("resultimage").style.backgroundImage = 'url(assets/images/game-win.jpg)';
+    };
 
-        if (wrongGuess === 10) {
-            document.getElementById("resultimage").style.backgroundImage = 'url(assets/images/game-lose.jpg)';
-        };
+    if (wrongGuess === 10) {
+        document.getElementById("resultimage").style.backgroundImage = 'url(assets/images/game-lose.jpg)';
+    };
 
     logger();
 
-    }
+    
 }
